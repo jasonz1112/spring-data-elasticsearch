@@ -39,7 +39,7 @@ pipeline {
 
 		stage("Test other configurations") {
 			when {
-				allOf {
+				anyOf {
 					branch 'master'
 					not { triggeredBy 'UpstreamCause' }
 				}
